@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <div>
+        <h2>Event Registration </h2>
+            <form id="registrationForm">
+                <label for="name">Full Name</label>
+    <input type="test"id="name" name="name"reguired/><br/><br/>
+    <label for="email">Email</label>
+    <input type="email"id="email" name="email"reguired/><br/><br/>
+    <label for="phone">Phone Number</label>
+    <input type="tel"id="phone" name="phone"reguired/><br/><br/>
+
+<label for="event">Select Event</label>
+    <select id="event" name="event"reguired>
+        <option value="workshop">Workshop</option>
+        <option value="seminar">Seminar</option>
+        <option value="conference">conference</option>
+        </select><br/><br/>
+        <button type="submit">Register</button>
+    </form>
+    <div class="message"id="message"></div>
+</div>
+<script>
+    const form=document.getElementBYId('registrationForm');
+    const message=document.getElementBYid('message');
+    form.addEventListener('submit',function(e){
+        e.preventDefault();
+        const name=document.getElementById('name').value;
+        const event=document.getElementById('event').value;
+        message.textcontent='Thank You,${name}! you are registered for the ${event}event';
+        form.reset();
+    });
+    </script>
+</body>
+</html>
+
